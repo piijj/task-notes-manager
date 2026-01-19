@@ -10,9 +10,6 @@ export const selectFilteredNotes = createSelector(
   [selectNotes, selectSearchQuery],
   (notes, searchQuery) => {
     // TODO: Implement filtering logic
-    // - If searchQuery is empty or whitespace only, return all notes
-    // - Otherwise, filter notes where text contains searchQuery (case-insensitive)
-    // - Return the filtered array
     return [];
   }
 );
@@ -20,7 +17,7 @@ export const selectFilteredNotes = createSelector(
 export const selectNotesCount = createSelector(
   [selectNotes], 
   (notes) => {
-    // TODO: Implement - return the count of notes
+    // TODO: Implement
     return 0;
   }
 );
@@ -28,7 +25,7 @@ export const selectNotesCount = createSelector(
 export const selectFilteredNotesCount = createSelector(
   [selectFilteredNotes],
   (notes) => {
-    // TODO: Implement - return the count of filtered notes
+    // TODO: Implement
     return 0;
   }
 );

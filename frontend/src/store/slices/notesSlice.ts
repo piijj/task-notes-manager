@@ -20,25 +20,25 @@ const notesSlice = createSlice({
   initialState,
   reducers: {
     setNotes: (state, action: PayloadAction<Note[]>) => {
-      // TODO: Implement - set the notes array from action.payload
+      // TODO: Implement
     },
     addNote: (state, action: PayloadAction<Note>) => {
-      // TODO: Implement - add note to the BEGINNING of the array (newest first)
+      // TODO: Implement
     },
     removeNote: (state, action: PayloadAction<string>) => {
-      // TODO: Implement - remove note by id (action.payload is the note id)
+      // TODO: Implement
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
-      // TODO: Implement - set loading state
+      // TODO: Implement
     },
     setError: (state, action: PayloadAction<string | null>) => {
-      // TODO: Implement - set error message
+      // TODO: Implement
     },
     setSearchQuery: (state, action: PayloadAction<string>) => {
-      // TODO: Implement - set search query
+      // TODO: Implement
     },
     clearNotes: (state) => {
-      // TODO: Implement - clear all notes and reset error to null
+      // TODO: Implement
     },
   },
 });
