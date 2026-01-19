@@ -9,17 +9,26 @@ export const selectSearchQuery = (state: RootState) => state.notes.searchQuery;
 export const selectFilteredNotes = createSelector(
   [selectNotes, selectSearchQuery],
   (notes, searchQuery) => {
-    if (!searchQuery.trim()) {
-      return notes;
-    }
-    const query = searchQuery.toLowerCase();
-    return notes.filter((note) => note.text.toLowerCase().includes(query));
+    // TODO: Implement filtering logic
+    // - If searchQuery is empty or whitespace only, return all notes
+    // - Otherwise, filter notes where text contains searchQuery (case-insensitive)
+    // - Return the filtered array
+    return [];
   }
 );
 
-export const selectNotesCount = createSelector([selectNotes], (notes) => notes.length);
+export const selectNotesCount = createSelector(
+  [selectNotes], 
+  (notes) => {
+    // TODO: Implement - return the count of notes
+    return 0;
+  }
+);
 
 export const selectFilteredNotesCount = createSelector(
   [selectFilteredNotes],
-  (notes) => notes.length
+  (notes) => {
+    // TODO: Implement - return the count of filtered notes
+    return 0;
+  }
 );
