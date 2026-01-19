@@ -1,140 +1,76 @@
-# Task Notes Manager - Coding Exam
+# Task Notes Manager - ERN Stack
 
-This is a complete implementation of a Task Notes Manager application built with Next.js, React, Redux, TypeScript, and Zod.
-
-## Features
-
-- ✅ Add notes to tasks
-- ✅ View all notes for a task
-- ✅ Delete notes
-- ✅ Search/filter notes
-- ✅ Real-time validation
-- ✅ Error handling
-- ✅ Loading states
-- ✅ Immutable state management
-
-## Tech Stack
-
-- **Next.js 16** - React framework
-- **React 19** - UI library
-- **Redux Toolkit** - State management
-- **TypeScript** - Type safety
-- **Zod** - Schema validation
-- **Tailwind CSS** - Styling
-- **Vitest** - Testing
-
-## Getting Started
-
-### Installation
-
-```bash
-npm install
-# or
-yarn install
-```
-
-### Development
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Testing
-
-```bash
-npm test
-# or
-yarn test
-```
-
-### Build
-
-```bash
-npm run build
-npm start
-```
+A full-stack task notes application built with Express, React, and Node.js.
 
 ## Project Structure
 
 ```
-exam-easy/
-├── app/
-│   ├── api/
-│   │   └── tasks/
-│   │       └── [taskId]/
-│   │           └── notes/
-│   │               ├── route.ts          # GET, POST endpoints
-│   │               └── [noteId]/
-│   │                   └── route.ts      # DELETE endpoint
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
-├── components/
-│   ├── NoteForm.tsx
-│   ├── NoteCard.tsx
-│   ├── NotesList.tsx
-│   ├── SearchBar.tsx
-│   ├── ErrorDisplay.tsx
-│   ├── LoadingSpinner.tsx
-│   └── ReduxProvider.tsx
-├── store/
-│   ├── store.ts
-│   ├── hooks.ts
-│   ├── slices/
-│   │   └── notesSlice.ts
-│   └── selectors/
-│       └── notesSelectors.ts
-├── types/
-│   └── note.ts
-├── schemas/
-│   └── noteSchema.ts
-└── tests/
-    ├── setup.ts
-    ├── notesSlice.test.ts
-    ├── notesSelectors.test.ts
-    └── noteSchema.test.ts
+├── backend/          # Express.js API server
+│   └── src/
+│       ├── controllers/   # Route handlers
+│       ├── store/         # In-memory data store
+│       ├── routes/        # API routes
+│       └── schemas/       # Zod validation schemas
+├── frontend/         # React + Vite frontend
+│   └── src/
+│       ├── components/    # React components
+│       ├── store/         # Redux store
+│       └── types/         # TypeScript types
+└── package.json      # Root scripts
 ```
 
-## Key Implementation Details
+## Prerequisites
 
-### Immutable State Management
+- Node.js 18+
 
-All Redux reducers use immutable updates:
+## Setup
 
-```typescript
-// Adding a note
-state.notes = [...state.notes, action.payload];
+1. **Install dependencies:**
 
-// Removing a note
-state.notes = state.notes.filter(note => note.id !== action.payload);
+```bash
+npm run install:all
 ```
 
-### API Validation
+2. **Run the development servers:**
 
-All API endpoints validate input using Zod schemas:
-
-```typescript
-const validationResult = createNoteSchema.safeParse(body);
-if (!validationResult.success) {
-  return NextResponse.json({ error: 'Validation failed' }, { status: 400 });
-}
+```bash
+npm run dev
 ```
 
-### Type Safety
+This starts both:
+- Backend: http://localhost:5000
+- Frontend: http://localhost:3000
 
-All components, functions, and API routes are fully typed with TypeScript.
+## API Endpoints
 
-## Test Coverage
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/tasks/:taskId/notes` | Get all notes for a task |
+| POST | `/api/tasks/:taskId/notes` | Create a new note |
+| DELETE | `/api/tasks/:taskId/notes/:noteId` | Delete a note |
+| GET | `/api/health` | Health check |
 
-The project includes comprehensive tests for:
+## Tech Stack
 
-- Redux slice reducers
-- Selectors
-- Zod schema validation
-- Immutability checks
+### Backend
+- Express.js
+- In-memory storage
+- Zod for validation
+- TypeScript
 
-Run tests with `npm test` or `yarn test`.
+### Frontend
+- React 18
+- Redux Toolkit
+- Tailwind CSS
+- Vite
+- TypeScript
+
+## Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Run both frontend and backend in development |
+| `npm run dev:backend` | Run backend only |
+| `npm run dev:frontend` | Run frontend only |
+| `npm run build` | Build both for production |
+| `npm run test` | Run frontend tests |
