@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="40" failures="0" errors="0" time="0.011513542">
+    <testsuite name="src/tests/noteSchema.test.ts" timestamp="2026-01-19T10:43:03.090Z" hostname="Paulines-MacBook-Pro.local" tests="11" failures="0" errors="0" skipped="0" time="0.003376042">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should validate a valid note" time="0.000968292">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject text shorter than 3 characters" time="0.00048175">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject text longer than 500 characters" time="0.000169583">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should accept text with exactly 3 characters" time="0.000113125">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should accept text with exactly 500 characters" time="0.000060167">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject empty taskId" time="0.0001285">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject missing text field" time="0.000223458">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject missing taskId field" time="0.00006275">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should validate a valid note id" time="0.000219375">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should reject empty id" time="0.000086333">
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should reject missing id field" time="0.000081666">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/tests/notesSelectors.test.ts" timestamp="2026-01-19T10:43:03.091Z" hostname="Paulines-MacBook-Pro.local" tests="16" failures="0" errors="0" skipped="0" time="0.003729041">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotes &gt; should return all notes" time="0.001215333">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotes &gt; should return empty array when no notes" time="0.000075084">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectLoading &gt; should return loading state" time="0.000145167">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectLoading &gt; should return false when not loading" time="0.000050209">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectError &gt; should return error message" time="0.000059792">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectError &gt; should return null when no error" time="0.000124709">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectSearchQuery &gt; should return search query" time="0.000127334">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return all notes when search query is empty" time="0.000237208">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should filter notes by search query (case insensitive)" time="0.000276209">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return multiple matches" time="0.000090208">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return empty array when no matches" time="0.00012375">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should ignore whitespace-only search query" time="0.0000505">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotesCount &gt; should return total count of notes" time="0.000053333">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotesCount &gt; should return 0 for empty notes" time="0.000029708">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotesCount &gt; should return count of filtered notes" time="0.00005725">
+        </testcase>
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotesCount &gt; should return total count when no filter" time="0.000082417">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/tests/notesSlice.test.ts" timestamp="2026-01-19T10:43:03.093Z" hostname="Paulines-MacBook-Pro.local" tests="13" failures="0" errors="0" skipped="0" time="0.004408459">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setNotes &gt; should set notes array" time="0.001515708">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setNotes &gt; should replace existing notes" time="0.000162708">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; addNote &gt; should add a note to the beginning of the array" time="0.000253167">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; addNote &gt; should add note to empty array" time="0.000143667">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; removeNote &gt; should remove a note by id" time="0.000236292">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; removeNote &gt; should not change state if note id not found" time="0.000199125">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setLoading &gt; should set loading to true" time="0.000087084">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setLoading &gt; should set loading to false" time="0.000133167">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setError &gt; should set error message" time="0.000218916">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setError &gt; should clear error with null" time="0.000083459">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setSearchQuery &gt; should set search query" time="0.0000495">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setSearchQuery &gt; should update existing search query" time="0.000073875">
+        </testcase>
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; clearNotes &gt; should clear all notes and error" time="0.000095708">
+        </testcase>
+    </testsuite>
+</testsuites>
