@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="40" failures="26" errors="0" time="0.029763209">
-    <testsuite name="src/tests/noteSchema.test.ts" timestamp="2026-01-19T10:57:29.460Z" hostname="Paulines-MacBook-Pro.local" tests="11" failures="7" errors="0" skipped="0" time="0.007965459">
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should validate a valid note" time="0.000948208">
-        </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject text shorter than 3 characters" time="0.00374975">
+<testsuites name="vitest tests" tests="26" failures="26" errors="0" time="0.025818957">
+    <testsuite name="src/tests/noteSchema.test.ts" timestamp="2026-01-19T11:07:38.149Z" hostname="Paulines-MacBook-Pro.local" tests="7" failures="7" errors="0" skipped="0" time="0.006680291">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject text shorter than 3 characters" time="0.004081083">
             <failure message="expected true to be false // Object.is equality" type="AssertionError">
 AssertionError: expected true to be false // Object.is equality
 
@@ -13,10 +11,10 @@ AssertionError: expected true to be false // Object.is equality
 - false
 + true
 
- ❯ src/tests/noteSchema.test.ts:21:27
+ ❯ src/tests/noteSchema.test.ts:12:27
             </failure>
         </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject text longer than 500 characters" time="0.0004165">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject text longer than 500 characters" time="0.000368834">
             <failure message="expected true to be false // Object.is equality" type="AssertionError">
 AssertionError: expected true to be false // Object.is equality
 
@@ -26,14 +24,49 @@ AssertionError: expected true to be false // Object.is equality
 - false
 + true
 
- ❯ src/tests/noteSchema.test.ts:35:27
+ ❯ src/tests/noteSchema.test.ts:26:27
             </failure>
         </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should accept text with exactly 3 characters" time="0.000084">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject empty taskId" time="0.000349667">
+            <failure message="expected true to be false // Object.is equality" type="AssertionError">
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ src/tests/noteSchema.test.ts:40:27
+            </failure>
         </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should accept text with exactly 500 characters" time="0.0000795">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject missing text field" time="0.000347958">
+            <failure message="expected true to be false // Object.is equality" type="AssertionError">
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ src/tests/noteSchema.test.ts:51:27
+            </failure>
         </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject empty taskId" time="0.000285166">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject missing taskId field" time="0.000465542">
+            <failure message="expected true to be false // Object.is equality" type="AssertionError">
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ src/tests/noteSchema.test.ts:59:27
+            </failure>
+        </testcase>
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should reject empty id" time="0.000193333">
             <failure message="expected true to be false // Object.is equality" type="AssertionError">
 AssertionError: expected true to be false // Object.is equality
 
@@ -46,7 +79,7 @@ AssertionError: expected true to be false // Object.is equality
  ❯ src/tests/noteSchema.test.ts:67:27
             </failure>
         </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject missing text field" time="0.000284292">
+        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should reject missing id field" time="0.000187042">
             <failure message="expected true to be false // Object.is equality" type="AssertionError">
 AssertionError: expected true to be false // Object.is equality
 
@@ -56,67 +89,12 @@ AssertionError: expected true to be false // Object.is equality
 - false
 + true
 
- ❯ src/tests/noteSchema.test.ts:78:27
-            </failure>
-        </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; createNoteSchema &gt; should reject missing taskId field" time="0.000433875">
-            <failure message="expected true to be false // Object.is equality" type="AssertionError">
-AssertionError: expected true to be false // Object.is equality
-
-- Expected
-+ Received
-
-- false
-+ true
-
- ❯ src/tests/noteSchema.test.ts:86:27
-            </failure>
-        </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should validate a valid note id" time="0.000365083">
-        </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should reject empty id" time="0.000273208">
-            <failure message="expected true to be false // Object.is equality" type="AssertionError">
-AssertionError: expected true to be false // Object.is equality
-
-- Expected
-+ Received
-
-- false
-+ true
-
- ❯ src/tests/noteSchema.test.ts:100:27
-            </failure>
-        </testcase>
-        <testcase classname="src/tests/noteSchema.test.ts" name="noteSchema &gt; deleteNoteSchema &gt; should reject missing id field" time="0.000215959">
-            <failure message="expected true to be false // Object.is equality" type="AssertionError">
-AssertionError: expected true to be false // Object.is equality
-
-- Expected
-+ Received
-
-- false
-+ true
-
- ❯ src/tests/noteSchema.test.ts:109:27
+ ❯ src/tests/noteSchema.test.ts:76:27
             </failure>
         </testcase>
     </testsuite>
-    <testsuite name="src/tests/notesSelectors.test.ts" timestamp="2026-01-19T10:57:29.464Z" hostname="Paulines-MacBook-Pro.local" tests="16" failures="7" errors="0" skipped="0" time="0.010176042">
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotes &gt; should return all notes" time="0.001139042">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotes &gt; should return empty array when no notes" time="0.000077875">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectLoading &gt; should return loading state" time="0.000140666">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectLoading &gt; should return false when not loading" time="0.000049166">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectError &gt; should return error message" time="0.000094833">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectError &gt; should return null when no error" time="0.000074125">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectSearchQuery &gt; should return search query" time="0.000100417">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return all notes when search query is empty" time="0.00421575">
+    <testsuite name="src/tests/notesSelectors.test.ts" timestamp="2026-01-19T11:07:38.152Z" hostname="Paulines-MacBook-Pro.local" tests="7" failures="7" errors="0" skipped="0" time="0.008248291">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return all notes when search query is empty" time="0.005119416">
             <failure message="expected [] to have a length of 3 but got +0" type="AssertionError">
 AssertionError: expected [] to have a length of 3 but got +0
 
@@ -126,10 +104,10 @@ AssertionError: expected [] to have a length of 3 but got +0
 - 3
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:96:21
+ ❯ src/tests/notesSelectors.test.ts:46:21
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should filter notes by search query (case insensitive)" time="0.000599542">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should filter notes by search query (case insensitive)" time="0.000484875">
             <failure message="expected [] to have a length of 1 but got +0" type="AssertionError">
 AssertionError: expected [] to have a length of 1 but got +0
 
@@ -139,10 +117,10 @@ AssertionError: expected [] to have a length of 1 but got +0
 - 1
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:102:21
+ ❯ src/tests/notesSelectors.test.ts:52:21
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return multiple matches" time="0.000330083">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return multiple matches" time="0.000352875">
             <failure message="expected [] to have a length of 2 but got +0" type="AssertionError">
 AssertionError: expected [] to have a length of 2 but got +0
 
@@ -152,12 +130,10 @@ AssertionError: expected [] to have a length of 2 but got +0
 - 2
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:109:21
+ ❯ src/tests/notesSelectors.test.ts:59:21
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should return empty array when no matches" time="0.000131125">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should ignore whitespace-only search query" time="0.000281833">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotes &gt; should ignore whitespace-only search query" time="0.000384708">
             <failure message="expected [] to have a length of 3 but got +0" type="AssertionError">
 AssertionError: expected [] to have a length of 3 but got +0
 
@@ -167,10 +143,10 @@ AssertionError: expected [] to have a length of 3 but got +0
 - 3
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:121:21
+ ❯ src/tests/notesSelectors.test.ts:65:21
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotesCount &gt; should return total count of notes" time="0.001112958">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotesCount &gt; should return total count of notes" time="0.000740292">
             <failure message="expected +0 to be 3 // Object.is equality" type="AssertionError">
 AssertionError: expected +0 to be 3 // Object.is equality
 
@@ -180,12 +156,10 @@ AssertionError: expected +0 to be 3 // Object.is equality
 - 3
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:128:36
+ ❯ src/tests/notesSelectors.test.ts:72:36
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectNotesCount &gt; should return 0 for empty notes" time="0.000121875">
-        </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotesCount &gt; should return count of filtered notes" time="0.00028075">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotesCount &gt; should return count of filtered notes" time="0.000263416">
             <failure message="expected +0 to be 2 // Object.is equality" type="AssertionError">
 AssertionError: expected +0 to be 2 // Object.is equality
 
@@ -195,10 +169,10 @@ AssertionError: expected +0 to be 2 // Object.is equality
 - 2
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:140:44
+ ❯ src/tests/notesSelectors.test.ts:79:44
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotesCount &gt; should return total count when no filter" time="0.000305708">
+        <testcase classname="src/tests/notesSelectors.test.ts" name="notesSelectors &gt; selectFilteredNotesCount &gt; should return total count when no filter" time="0.000242583">
             <failure message="expected +0 to be 3 // Object.is equality" type="AssertionError">
 AssertionError: expected +0 to be 3 // Object.is equality
 
@@ -208,12 +182,12 @@ AssertionError: expected +0 to be 3 // Object.is equality
 - 3
 + 0
 
- ❯ src/tests/notesSelectors.test.ts:145:44
+ ❯ src/tests/notesSelectors.test.ts:84:44
             </failure>
         </testcase>
     </testsuite>
-    <testsuite name="src/tests/notesSlice.test.ts" timestamp="2026-01-19T10:57:29.467Z" hostname="Paulines-MacBook-Pro.local" tests="13" failures="12" errors="0" skipped="0" time="0.011621708">
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setNotes &gt; should set notes array" time="0.006015125">
+    <testsuite name="src/tests/notesSlice.test.ts" timestamp="2026-01-19T11:07:38.155Z" hostname="Paulines-MacBook-Pro.local" tests="12" failures="12" errors="0" skipped="0" time="0.010890375">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setNotes &gt; should set notes array" time="0.005609">
             <failure message="expected [] to deeply equal [ { id: &apos;note-1&apos;, …(3) }, …(1) ]" type="AssertionError">
 AssertionError: expected [] to deeply equal [ { id: &apos;note-1&apos;, …(3) }, …(1) ]
 
@@ -222,13 +196,13 @@ AssertionError: expected [] to deeply equal [ { id: &apos;note-1&apos;, …(3) }
 
 - [
 -   {
--     &quot;createdAt&quot;: 1768820249399,
+-     &quot;createdAt&quot;: 1768820858100,
 -     &quot;id&quot;: &quot;note-1&quot;,
 -     &quot;taskId&quot;: &quot;task-1&quot;,
 -     &quot;text&quot;: &quot;Test note&quot;,
 -   },
 -   {
--     &quot;createdAt&quot;: 1768820249399,
+-     &quot;createdAt&quot;: 1768820858100,
 -     &quot;id&quot;: &quot;note-2&quot;,
 -     &quot;taskId&quot;: &quot;task-1&quot;,
 -     &quot;text&quot;: &quot;Another test note&quot;,
@@ -239,7 +213,7 @@ AssertionError: expected [] to deeply equal [ { id: &apos;note-1&apos;, …(3) }
  ❯ src/tests/notesSlice.test.ts:39:24
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setNotes &gt; should replace existing notes" time="0.000921">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setNotes &gt; should replace existing notes" time="0.000960291">
             <failure message="expected [ { id: &apos;note-1&apos;, …(3) } ] to deeply equal [ { id: &apos;note-2&apos;, …(3) } ]" type="AssertionError">
 AssertionError: expected [ { id: &apos;note-1&apos;, …(3) } ] to deeply equal [ { id: &apos;note-2&apos;, …(3) } ]
 
@@ -248,7 +222,7 @@ AssertionError: expected [ { id: &apos;note-1&apos;, …(3) } ] to deeply equal 
 
   [
     {
-      &quot;createdAt&quot;: 1768820249399,
+      &quot;createdAt&quot;: 1768820858100,
 -     &quot;id&quot;: &quot;note-2&quot;,
 +     &quot;id&quot;: &quot;note-1&quot;,
       &quot;taskId&quot;: &quot;task-1&quot;,
@@ -260,7 +234,7 @@ AssertionError: expected [ { id: &apos;note-1&apos;, …(3) } ] to deeply equal 
  ❯ src/tests/notesSlice.test.ts:47:24
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; addNote &gt; should add a note to the beginning of the array" time="0.000537583">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; addNote &gt; should add a note to the beginning of the array" time="0.000463458">
             <failure message="expected 1 to be 2 // Object.is equality" type="AssertionError">
 AssertionError: expected 1 to be 2 // Object.is equality
 
@@ -273,7 +247,7 @@ AssertionError: expected 1 to be 2 // Object.is equality
  ❯ src/tests/notesSlice.test.ts:56:31
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; addNote &gt; should add note to empty array" time="0.000409833">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; addNote &gt; should add note to empty array" time="0.000373959">
             <failure message="expected +0 to be 1 // Object.is equality" type="AssertionError">
 AssertionError: expected +0 to be 1 // Object.is equality
 
@@ -286,7 +260,7 @@ AssertionError: expected +0 to be 1 // Object.is equality
  ❯ src/tests/notesSlice.test.ts:62:31
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; removeNote &gt; should remove a note by id" time="0.000358708">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; removeNote &gt; should remove a note by id" time="0.000334208">
             <failure message="expected 2 to be 1 // Object.is equality" type="AssertionError">
 AssertionError: expected 2 to be 1 // Object.is equality
 
@@ -299,9 +273,7 @@ AssertionError: expected 2 to be 1 // Object.is equality
  ❯ src/tests/notesSlice.test.ts:71:31
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; removeNote &gt; should not change state if note id not found" time="0.000108333">
-        </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setLoading &gt; should set loading to true" time="0.000306791">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setLoading &gt; should set loading to true" time="0.000303125">
             <failure message="expected false to be true // Object.is equality" type="AssertionError">
 AssertionError: expected false to be true // Object.is equality
 
@@ -311,10 +283,10 @@ AssertionError: expected false to be true // Object.is equality
 - true
 + false
 
- ❯ src/tests/notesSlice.test.ts:85:26
+ ❯ src/tests/notesSlice.test.ts:79:26
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setLoading &gt; should set loading to false" time="0.000206833">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setLoading &gt; should set loading to false" time="0.00016325">
             <failure message="expected true to be false // Object.is equality" type="AssertionError">
 AssertionError: expected true to be false // Object.is equality
 
@@ -324,10 +296,10 @@ AssertionError: expected true to be false // Object.is equality
 - false
 + true
 
- ❯ src/tests/notesSlice.test.ts:91:26
+ ❯ src/tests/notesSlice.test.ts:85:26
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setError &gt; should set error message" time="0.000335417">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setError &gt; should set error message" time="0.000241208">
             <failure message="expected null to be &apos;Something went wrong&apos; // Object.is equality" type="AssertionError">
 AssertionError: expected null to be &apos;Something went wrong&apos; // Object.is equality
 
@@ -337,10 +309,10 @@ AssertionError: expected null to be &apos;Something went wrong&apos; // Object.i
 + Received: 
 null
 
- ❯ src/tests/notesSlice.test.ts:101:24
+ ❯ src/tests/notesSlice.test.ts:95:24
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setError &gt; should clear error with null" time="0.00029225">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setError &gt; should clear error with null" time="0.000433083">
             <failure message="expected &apos;Previous error&apos; to be null" type="AssertionError">
 AssertionError: expected &apos;Previous error&apos; to be null
 
@@ -350,10 +322,10 @@ null
 + Received: 
 &quot;Previous error&quot;
 
- ❯ src/tests/notesSlice.test.ts:107:24
+ ❯ src/tests/notesSlice.test.ts:101:24
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setSearchQuery &gt; should set search query" time="0.00026375">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setSearchQuery &gt; should set search query" time="0.000219375">
             <failure message="expected &apos;&apos; to be &apos;test&apos; // Object.is equality" type="AssertionError">
 AssertionError: expected &apos;&apos; to be &apos;test&apos; // Object.is equality
 
@@ -362,20 +334,20 @@ AssertionError: expected &apos;&apos; to be &apos;test&apos; // Object.is equali
 
 - test
 
- ❯ src/tests/notesSlice.test.ts:114:30
+ ❯ src/tests/notesSlice.test.ts:108:30
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setSearchQuery &gt; should update existing search query" time="0.000456208">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; setSearchQuery &gt; should update existing search query" time="0.000454583">
             <failure message="expected &apos;old&apos; to be &apos;new&apos; // Object.is equality" type="AssertionError">
 AssertionError: expected &apos;old&apos; to be &apos;new&apos; // Object.is equality
 
 Expected: &quot;new&quot;
 Received: &quot;old&quot;
 
- ❯ src/tests/notesSlice.test.ts:120:30
+ ❯ src/tests/notesSlice.test.ts:114:30
             </failure>
         </testcase>
-        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; clearNotes &gt; should clear all notes and error" time="0.000444583">
+        <testcase classname="src/tests/notesSlice.test.ts" name="notesSlice &gt; clearNotes &gt; should clear all notes and error" time="0.000420416">
             <failure message="expected [ { id: &apos;note-1&apos;, …(3) }, …(1) ] to deeply equal []" type="AssertionError">
 AssertionError: expected [ { id: &apos;note-1&apos;, …(3) }, …(1) ] to deeply equal []
 
@@ -385,20 +357,20 @@ AssertionError: expected [ { id: &apos;note-1&apos;, …(3) }, …(1) ] to deepl
 - []
 + [
 +   {
-+     &quot;createdAt&quot;: 1768820249399,
++     &quot;createdAt&quot;: 1768820858100,
 +     &quot;id&quot;: &quot;note-1&quot;,
 +     &quot;taskId&quot;: &quot;task-1&quot;,
 +     &quot;text&quot;: &quot;Test note&quot;,
 +   },
 +   {
-+     &quot;createdAt&quot;: 1768820249399,
++     &quot;createdAt&quot;: 1768820858100,
 +     &quot;id&quot;: &quot;note-2&quot;,
 +     &quot;taskId&quot;: &quot;task-1&quot;,
 +     &quot;text&quot;: &quot;Another test note&quot;,
 +   },
 + ]
 
- ❯ src/tests/notesSlice.test.ts:132:24
+ ❯ src/tests/notesSlice.test.ts:126:24
             </failure>
         </testcase>
     </testsuite>

@@ -9,7 +9,7 @@ export const selectSearchQuery = (state: RootState) => state.notes.searchQuery;
 export const selectFilteredNotes = createSelector(
   [selectNotes, selectSearchQuery],
   (notes, searchQuery) => {
-    // TODO: Implement filtering logic
+    // TODO: Implement
     return [];
   }
 );

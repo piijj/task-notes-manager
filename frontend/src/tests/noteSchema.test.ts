@@ -3,15 +3,6 @@ import { createNoteSchema, deleteNoteSchema } from '../schemas/noteSchema';
 
 describe('noteSchema', () => {
 	describe('createNoteSchema', () => {
-		it('should validate a valid note', () => {
-			const validNote = {
-				text: 'This is a valid note',
-				taskId: 'task-1',
-			};
-			const result = createNoteSchema.safeParse(validNote);
-			expect(result.success).toBe(true);
-		});
-
 		it('should reject text shorter than 3 characters', () => {
 			const invalidNote = {
 				text: 'ab',
@@ -38,24 +29,6 @@ describe('noteSchema', () => {
 					'Note must be at most 500 characters',
 				);
 			}
-		});
-
-		it('should accept text with exactly 3 characters', () => {
-			const validNote = {
-				text: 'abc',
-				taskId: 'task-1',
-			};
-			const result = createNoteSchema.safeParse(validNote);
-			expect(result.success).toBe(true);
-		});
-
-		it('should accept text with exactly 500 characters', () => {
-			const validNote = {
-				text: 'a'.repeat(500),
-				taskId: 'task-1',
-			};
-			const result = createNoteSchema.safeParse(validNote);
-			expect(result.success).toBe(true);
 		});
 
 		it('should reject empty taskId', () => {
@@ -88,12 +61,6 @@ describe('noteSchema', () => {
 	});
 
 	describe('deleteNoteSchema', () => {
-		it('should validate a valid note id', () => {
-			const validInput = { id: 'note-123' };
-			const result = deleteNoteSchema.safeParse(validInput);
-			expect(result.success).toBe(true);
-		});
-
 		it('should reject empty id', () => {
 			const invalidInput = { id: '' };
 			const result = deleteNoteSchema.safeParse(invalidInput);

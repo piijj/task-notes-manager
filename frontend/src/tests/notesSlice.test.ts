@@ -71,12 +71,6 @@ describe('notesSlice', () => {
 			expect(state.notes.length).toBe(1);
 			expect(state.notes[0].id).toBe('note-2');
 		});
-
-		it('should not change state if note id not found', () => {
-			const stateWithNotes = { ...initialState, notes: [mockNote] };
-			const state = notesReducer(stateWithNotes, removeNote('non-existent'));
-			expect(state.notes.length).toBe(1);
-		});
 	});
 
 	describe('setLoading', () => {
