@@ -20,7 +20,7 @@ vitest.on('close', (code) => {
 	try {
 		const jsonMatch = output.match(/\{[\s\S]*\}/);
 		if (!jsonMatch) {
-			console.log('FS_SCORE: 0%');
+			console.log('FS_SCORE:0%');
 			process.exit(0);
 		}
 
@@ -46,15 +46,15 @@ vitest.on('close', (code) => {
 		}
 
 		const percent = total > 0 ? Math.round((passed / total) * 100) : 0;
-		console.log(`FS_SCORE: ${percent}%`);
+		console.log(`FS_SCORE:${percent}%`);
 		process.exit(0);
 	} catch (error) {
-		console.log('FS_SCORE: 0%');
+		console.log('FS_SCORE:0%');
 		process.exit(0);
 	}
 });
 
 vitest.on('error', () => {
-	console.log('FS_SCORE: 0%');
+	console.log('FS_SCORE:0%');
 	process.exit(0);
 });
